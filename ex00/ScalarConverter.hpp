@@ -14,23 +14,27 @@ class ScalarConverter
 		ScalarConverter(ScalarConverter const&);
 		ScalarConverter & operator=(ScalarConverter const&);
 
-		char const& getChar(void) const;
-		int const& getInt(void) const;
-		float const& getFloat(void) const;
-		double const& getDouble(void) const;
+		// char const& getChar(void) const;
+		// int const& getInt(void) const;
+		// float const& getFloat(void) const;
+		// double const& getDouble(void) const;
 
-		void setChar(std::string);
-		void setInt(std::string);
-		void setFloat(std::string);
-		void setDouble(std::string);
+		// static void setChar(std::string);
+		// static void setInt(std::string);
+		// static void setFloat(std::string);
+		// static void setDouble(std::string);
 
-		void convert(std::string);
+		static void convert(std::string const&);
 
 	private:
-		char _c;
-		int _i;
-		float _f;
-		double _d;
+		static char convertChar(std::string const&);
+		static int convertInt(std::string const&);
+		static float convertFloat(std::string const&);
+		static double convertDouble(std::string const&);
+		// static char _c ;
+		// static int _i;
+		// static float _f;
+		// static double _d;
 };
 
-std::ostream & operator<<(std::ostream &, ScalarConverter const&);
+// std::ostream & operator<<(std::ostream &, ScalarConverter const&);

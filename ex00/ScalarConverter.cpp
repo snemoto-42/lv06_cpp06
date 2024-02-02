@@ -1,16 +1,53 @@
 #include "ScalarConverter.hpp"
 
+// char ScalarConverter::_c = 0;
+// int ScalarConverter::_i = 0;
+// float ScalarConverter::_f = 0;
+// double ScalarConverter::_d = 0;
+
+void ScalarConverter::convert(std::string const& str)
+{
+	try
+	{
+		char c = convertChar(str);
+		int i = convertInt(str);
+		float f = convertFloat(str);
+		double d = convertDouble(str);
+
+		std::cout << "char: " << "'" << c << "'" << std::endl;
+		std::cout << "int: " << i << std::endl;
+		std::cout << "float: " << f << "f" << std::endl;
+		std::cout << "double: " << d << std::endl;
+	}
+	catch(const std::exception & e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+}
+
+char ScalarConverter::convertChar(std::string const& str)
+{
+	return static_cast<char>(std::stoi(str));
+}
+
+int ScalarConverter::convertInt(std::string const& str)
+{
+	return std::stoi(str);
+}
+
+float ScalarConverter::convertFloat(std::string const& str)
+{
+	return std::stof(str);
+}
+
+double ScalarConverter::convertDouble(std::string const& str)
+{
+	return std::stod(str);
+}
+
 ScalarConverter::ScalarConverter()
 {
 	std::cout << GREEN << "Default constructor called" << RESET << std::endl;
-}
-
-void ScalarConverter::convert(std::string arg)
-{
-	setChar(arg);
-	setInt(arg);
-	setFloat(arg);
-	setDouble(arg);
 }
 
 ScalarConverter::~ScalarConverter()
@@ -29,49 +66,49 @@ ScalarConverter& ScalarConverter::operator=(ScalarConverter const& x)
 	std::cout << GREEN << "Copy assignment operator called" << RESET << std::endl;
 	if (this != &x)
 	{
-		_c = x._c;
-		_i = x._i;
-		_f = x._f;
-		_d = x._d;
+		// _c = x._c;
+		// _i = x._i;
+		// _f = x._f;
+		// _d = x._d;
 	}
 	return (*this);		
 }
 
-char const& ScalarConverter::getChar(void) const {return _c;}
+// char const& ScalarConverter::getChar(void) const {return _c;}
 
-int const& ScalarConverter::getInt(void) const {return _i;}
+// int const& ScalarConverter::getInt(void) const {return _i;}
 
-float const& ScalarConverter::getFloat(void) const {return _f;}
+// float const& ScalarConverter::getFloat(void) const {return _f;}
 
-double const& ScalarConverter::getDouble(void) const {return _d;}
+// double const& ScalarConverter::getDouble(void) const {return _d;}
 
-void ScalarConverter::setChar(std::string str)
-{
-	_c = *str.c_str();
-}
+// void ScalarConverter::setChar(std::string str)
+// {
+// 	_c = *str.c_str();
+// }
 
-void ScalarConverter::setInt(std::string str)
-{
-	_i = std::stoi(str);
-}
+// void ScalarConverter::setInt(std::string str)
+// {
+// 	_i = std::stoi(str);
+// }
 
-void ScalarConverter::setFloat(std::string str)
-{
-	_f = std::stof(str);
-}
+// void ScalarConverter::setFloat(std::string str)
+// {
+// 	_f = std::stof(str);
+// }
 
-void ScalarConverter::setDouble(std::string str)
-{
-	_d = std::stod(str);
-}
+// void ScalarConverter::setDouble(std::string str)
+// {
+// 	_d = std::stod(str);
+// }
 
-std::ostream& operator<<(std::ostream& os, ScalarConverter const& ref)
-{
-	os << ">>>" << std::endl;
-	os << "char: " << ref.getChar() << std::endl;
-	os << "int: " << ref.getInt() << std::endl;
-	os << "float: " << ref.getFloat() << std::endl;
-	os << "double: " << ref.getDouble() << std::endl;
-	os << "<<<";
-	return os;
-}
+// std::ostream& operator<<(std::ostream& os, ScalarConverter const& ref)
+// {
+// 	os << ">>>" << std::endl;
+// 	os << "char: " << ref.getChar() << std::endl;
+// 	os << "int: " << ref.getInt() << std::endl;
+// 	os << "float: " << ref.getFloat() << std::endl;
+// 	os << "double: " << ref.getDouble() << std::endl;
+// 	os << "<<<";
+// 	return os;
+// }
