@@ -9,16 +9,6 @@
 class ScalarConverter
 {
 	public:
-		// char const& getChar(void) const;
-		// int const& getInt(void) const;
-		// float const& getFloat(void) const;
-		// double const& getDouble(void) const;
-
-		// static void setChar(std::string);
-		// static void setInt(std::string);
-		// static void setFloat(std::string);
-		// static void setDouble(std::string);
-
 		static void convert(std::string const&);
 
 	private:
@@ -31,11 +21,4 @@ class ScalarConverter
 		~ScalarConverter();
 		ScalarConverter(ScalarConverter const&);
 		ScalarConverter & operator=(ScalarConverter const&);
-
-		// static char _c ;
-		// static int _i;
-		// static float _f;
-		// static double _d;
 };
-
-// std::ostream & operator<<(std::ostream &, ScalarConverter const&);
