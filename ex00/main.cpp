@@ -8,7 +8,7 @@ int main(int argc, char **argv)
 		return (0);
 	}
 	{
-		std::cout << "Static method Test" << std::endl;
+		std::cout << "Static class method Test" << std::endl;
 		ScalarConverter::convert(argv[1]);
 	}
 	// {
