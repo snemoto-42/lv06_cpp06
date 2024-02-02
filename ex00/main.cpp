@@ -1,4 +1,4 @@
-#include "Convert.hpp"
+#include "ScalarConverter.hpp"
 
 int main(int argc, char **argv)
 {
@@ -7,7 +7,8 @@ int main(int argc, char **argv)
 		std::cout << "Invalid arg" << std::endl;
 		return (0);
 	}
-	Convert c(argv[1]);
+	ScalarConverter c;
+	c.convert(argv[1]);
 	std::cout << c << std::endl;
 	return (0);
 }
