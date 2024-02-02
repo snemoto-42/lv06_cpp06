@@ -8,7 +8,7 @@ OBJDIR	= obj/
 OBJS	= $(addprefix $(OBJDIR),$(SRCS:.cpp=.o)) 
 
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic -Wconversion
 RM			= rm -f
 RMD			= rm -rf
 
