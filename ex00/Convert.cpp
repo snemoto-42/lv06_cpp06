@@ -31,7 +31,11 @@ std::string const& Convert::getArg(void) const {return _arg;}
 std::ostream& operator<<(std::ostream& os, Convert const& ref)
 {
 	os << ">>>" << std::endl;
-	os << "Original string : " << ref.getArg() << std::endl;
+	os << "original arg: " << ref.getArg() << std::endl;
+	os << "char: " << "xxx" << std::endl;
+	os << "int: " << "xxx" << std::endl;
+	os << "float: " << "xxx" << std::endl;
+	os << "double: " << "xxx" << std::endl;
 	os << "<<<";
 	return os;
 }
