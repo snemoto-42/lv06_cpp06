@@ -2,7 +2,7 @@
 
 ScalarConverter::ScalarConverter()
 {
-	std::cout << GREEN << "ScalarConverter : Default constructor called" << RESET << std::endl;
+	std::cout << GREEN << "Default constructor called" << RESET << std::endl;
 }
 
 void ScalarConverter::convert(std::string arg)
@@ -15,18 +15,18 @@ void ScalarConverter::convert(std::string arg)
 
 ScalarConverter::~ScalarConverter()
 {
-	std::cout << GREEN << "ScalarConverter : Destructor called" << RESET << std::endl;	
+	std::cout << GREEN << "Destructor called" << RESET << std::endl;	
 }
 
 ScalarConverter::ScalarConverter(ScalarConverter const& x)
 {
-	std::cout << GREEN << "ScalarConverter : Copy constructor called" << RESET << std::endl;
+	std::cout << GREEN << "Copy constructor called" << RESET << std::endl;
 	*this = x;
 }
 
 ScalarConverter& ScalarConverter::operator=(ScalarConverter const& x)
 {
-	std::cout << GREEN << "ScalarConverter : Copy assignment operator called" << RESET << std::endl;
+	std::cout << GREEN << "Copy assignment operator called" << RESET << std::endl;
 	if (this != &x)
 	{
 		_c = x._c;
