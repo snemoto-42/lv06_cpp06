@@ -1,3 +1,5 @@
+#usr/bin/bash
+
 make re
 echo ------------test for ascii--------------
 for VAL in `seq 0 +1 127`
