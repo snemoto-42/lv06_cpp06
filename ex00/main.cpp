@@ -13,3 +13,10 @@ int main(int argc, char **argv)
 	}
 	return (0);
 }
+
+#include <libc.h>
+__attribute__((destructor))
+static void destructor() {
+std::cout << "\n";
+system("leaks -q convert");
+}
