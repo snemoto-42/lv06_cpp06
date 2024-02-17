@@ -12,10 +12,10 @@ class ScalarConverter
 		static void convert(std::string const&);
 
 	private:
-		static char convertChar(std::string const&);
-		static int convertInt(std::string const&);
-		static float convertFloat(std::string const&);
-		static double convertDouble(std::string const&);
+		static void convertChar(std::string const&);
+		static void convertInt(std::string const&);
+		static void convertFloat(std::string const&);
+		static void convertDouble(std::string const&);
 
 		ScalarConverter();
 		~ScalarConverter();
