@@ -2,11 +2,15 @@
 
 uintptr_t Serializer::serialize(Data* ptr)
 {
+	if (!ptr)
+		throw std::invalid_argument("Received NULL pointer");
 	return reinterpret_cast<uintptr_t>(ptr);
 }
 
 Data* Serializer::deserialize(uintptr_t raw)
 {
+	if (!raw)
+		throw std::invalid_argument("Received NULL pointer");
 	return reinterpret_cast<Data*>(raw);
 }
 
