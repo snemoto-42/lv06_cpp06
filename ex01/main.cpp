@@ -54,9 +54,9 @@ int main(void)
 	return 0;
 }
 
-#include <libc.h>
-__attribute__((destructor))
-static void destructor() {
-std::cout << "\n";
-system("leaks -q serialize");
-}
+// #include <libc.h>
+// __attribute__((destructor))
+// static void destructor() {
+// std::cout << "\n";
+// system("leaks -q serialize");
+// }

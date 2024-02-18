@@ -69,7 +69,7 @@ void identify(Base& p)
 int main(void)
 {
 	{
-		std::cout << "Random Test" << std::endl;
+		std::cout << ">>> Random Test <<<" << std::endl;
 		Base* test = generate();
 		if (!test)
 			std::cerr << "srand() error" << std::endl;
@@ -80,12 +80,26 @@ int main(void)
 		}
 		delete test;
 	}
+	{
+		std::cout << ">>> NULL Test for pointer <<<" << std::endl;
+		identify(NULL);
+	}
+	// try
+	// {
+	// 	std::cout << ">>> NULL Test for reference <<<" << std::endl;
+	// 	Base* test = NULL; 
+	// 	identify(*test);
+	// }
+	// catch(std::exception const& e)
+	// {
+	// 	std::cerr << e.what() << std::endl;
+	// }
 	return 0;
 }
 
-#include <libc.h>
-__attribute__((destructor))
-static void destructor() {
-std::cout << "\n";
-system("leaks -q identify");
-}
+// #include <libc.h>
+// __attribute__((destructor))
+// static void destructor() {
+// std::cout << "\n";
+// system("leaks -q identify");
+// }
