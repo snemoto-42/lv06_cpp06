@@ -43,7 +43,7 @@ void ScalarConverter::convertFloat(std::string const& str)
 	{
 		float f = std::stof(str);
 		std::string sign = "";
-		if (f == INFINITY)
+		if (f == std::numeric_limits<float>::infinity())
 			sign = "+";
 		std::string prec = "";
 		if (f - std::floor(f) == 0)
@@ -62,7 +62,7 @@ void ScalarConverter::convertDouble(std::string const& str)
 	{
 		double d = std::stod(str);
 		std::string sign = "";
-		if (d == INFINITY)
+		if (d == std::numeric_limits<double>::infinity())
 			sign = "+";
 		std::string prec = "";
 		if (d - std::floor(d) == 0)

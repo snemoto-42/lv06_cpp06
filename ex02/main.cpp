@@ -48,14 +48,14 @@ void identify(Base& p)
 	{
 		try
 		{
-			dynamic_cast<B&>(p);
+			B b = dynamic_cast<B&>(p);
 			std::cout << "B" << std::endl;
 		}
 		catch (std::bad_cast const&)
 		{
 			try
 			{
-				dynamic_cast<C&>(p);
+				C c = dynamic_cast<C&>(p);
 				std::cout << "C" << std::endl;
 			}
 			catch (std::bad_cast const&)

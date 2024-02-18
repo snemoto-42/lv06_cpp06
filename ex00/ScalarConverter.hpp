@@ -5,6 +5,8 @@
 #define RED     "\033[31m"
 
 #include <iostream>
+#include <cmath>
+#include <limits>
 
 class ScalarConverter
 {
